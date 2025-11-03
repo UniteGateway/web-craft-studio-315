@@ -114,22 +114,11 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Bottom CTA section */}
-            <div className="flex flex-col md:flex-row items-center gap-6 pt-8">
-              <Button 
-                size="lg" 
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-xl md:text-2xl px-12 py-8 h-auto font-black rounded-full shadow-xl hover:shadow-2xl transition-all uppercase"
-              >
-                Connect Now<br />Free Inspection
-              </Button>
-              <div className="text-foreground">
-                <p className="text-xl md:text-2xl font-bold">
-                  UN SECURED SOLAR FINANCE @ 8.75% PA
-                </p>
-                <p className="text-lg md:text-xl font-semibold">
-                  ALL INDIA INSTALLATION AND SERVICE
-                </p>
-              </div>
+            {/* Bottom text */}
+            <div className="pt-8">
+              <p className="text-xl md:text-2xl font-bold text-foreground">
+                UN SECURED SOLAR FINANCE @ 8.75% PA
+              </p>
             </div>
           </div>
         </div>
