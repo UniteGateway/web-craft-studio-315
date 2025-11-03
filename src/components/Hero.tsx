@@ -1,93 +1,143 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import uniteLogo from "@/assets/unite-logo.png";
 import solarHero from "@/assets/solar-hero-bg.jpg";
+import businessWoman from "@/assets/business-woman.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-[hsl(200,60%,85%)] to-white overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-40"
         style={{
           backgroundImage: `url(${solarHero})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          filter: 'brightness(1.1)',
         }}
       />
       
-      <div className="relative container mx-auto px-4 py-8">
-        <header className="mb-12">
+      <div className="relative">
+        {/* Yellow header bars */}
+        <div className="flex items-center justify-between bg-secondary text-secondary-foreground">
+          <div className="flex items-center gap-2 px-6 py-3 font-bold text-lg">
+            <Mail className="h-5 w-5" />
+            info@unitesolar.in
+          </div>
           <img 
             src={uniteLogo} 
             alt="Unite Solar" 
-            className="h-16 md:h-20"
+            className="h-16 md:h-20 py-2"
           />
-        </header>
+          <div className="flex items-center gap-2 px-6 py-3 font-bold text-lg">
+            <Phone className="h-5 w-5" />
+            +91 9667660773
+          </div>
+        </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-black text-primary leading-tight">
-                ZERO INVESTMENT<br />
-                OWN YOUR SOLAR PLANT!
-              </h1>
-              <div className="inline-block bg-secondary px-8 py-3 transform -skew-x-6">
-                <p className="text-2xl md:text-3xl font-bold text-secondary-foreground skew-x-6">
-                  Industries & Rice Mills
-                </p>
-              </div>
-            </div>
+        {/* Main content */}
+        <div className="container mx-auto px-4 py-12">
+          <div className="space-y-6">
+            {/* Main headline */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-primary leading-none tracking-tight">
+              ZERO INVESTMENT<br />
+              OWN YOUR SOLAR PLANT!
+            </h1>
 
-            <div className="bg-primary/90 backdrop-blur-sm p-8 rounded-lg space-y-4 text-primary-foreground shadow-2xl">
-              <p className="text-2xl font-bold">Pay Power Bill as EMI.</p>
-              <p className="text-xl font-semibold">
-                No Maintenance, No Cleaning,<br />
-                No Insurance, No AMC<br />
-                <span className="text-secondary text-3xl font-black">All 5 Years FREE!</span>
+            {/* Industries badge */}
+            <div className="inline-block bg-foreground text-secondary px-8 py-3 rounded-full">
+              <p className="text-xl md:text-2xl font-bold uppercase">
+                Industries - Mills
               </p>
             </div>
 
-            <Button 
-              size="lg" 
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-xl px-8 py-6 h-auto font-bold shadow-lg hover:shadow-xl transition-all"
-            >
-              <Phone className="mr-2 h-6 w-6" />
-              Call Now: 9667660773
-            </Button>
-          </div>
+            {/* Subheadline */}
+            <div className="space-y-2">
+              <h2 className="text-3xl md:text-5xl font-black text-foreground">
+                NO MORE WORRIES!
+              </h2>
+              <p className="text-2xl md:text-4xl font-bold text-foreground">
+                PAY POWER BILL AS EMI
+              </p>
+            </div>
 
-          <div className="relative">
-            <div className="grid grid-cols-1 gap-6">
-              <FeatureBadge 
-                number="30"
-                unit="Years"
-                title="30 Years"
-                description="Performance Warranty"
-              />
-              <FeatureBadge 
-                number="12"
-                unit="Years"
-                title="12 Years"
-                description="Product Warranty"
-              />
-              <FeatureBadge 
-                number="10"
-                unit="Years"
-                title="Toy Maintenance,"
-                description="No Cleaning, No Insurance, No AMC"
-              />
-              <FeatureBadge 
-                number="80"
-                unit="%"
-                suffix="FREE"
-                title="100% Maintenance,"
-                description="Insurance Cleaning Free 5"
-              />
-              <FeatureBadge 
-                icon="📈"
-                title="Helps 80%"
-                description="Fuel Savings During 30 FRS"
-              />
+            {/* Main grid with features and woman */}
+            <div className="grid lg:grid-cols-2 gap-8 items-start pt-8">
+              {/* Left side - Feature badges */}
+              <div className="space-y-4">
+                <FeatureBadge 
+                  number="30"
+                  unit="YEARS"
+                  title="PERFORMANCE GAURENTY"
+                />
+                <FeatureBadge 
+                  number="12"
+                  unit="YEARS"
+                  title="PRODUCT WARRANTY"
+                />
+                <FeatureBadge 
+                  number="5"
+                  unit="YEARS"
+                  title="AMC-INSURANCE-CLEANING"
+                />
+                <FeatureBadge 
+                  number="5"
+                  unit="YEARS"
+                  title="RETURN ON INVESTMENT"
+                />
+                <FeatureBadge 
+                  number="25"
+                  unit="YEARS"
+                  title="FREE POWER UP TO 90%"
+                />
+                <FeatureBadge 
+                  number="5"
+                  unit="YEARS"
+                  title="DEDICATED SITE ENGINEER"
+                />
+                <FeatureBadge 
+                  number="5"
+                  unit="YEARS"
+                  title="TOP 5 BRANDS IN INDIA"
+                />
+              </div>
+
+              {/* Right side - Woman with ROI badges */}
+              <div className="relative flex justify-end items-end h-full">
+                <img 
+                  src={businessWoman} 
+                  alt="Professional consultant" 
+                  className="h-[500px] md:h-[600px] object-contain relative z-10"
+                />
+                <div className="absolute right-0 top-1/3 space-y-4 z-20">
+                  <div className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-bold shadow-lg">
+                    <div className="text-3xl">20% ROI FIRST</div>
+                    <div className="text-3xl">5 YEARS</div>
+                  </div>
+                  <div className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-bold shadow-lg">
+                    <div className="text-3xl">80% ROI</div>
+                    <div className="text-3xl">NEXT 25 YEARS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom CTA section */}
+            <div className="flex flex-col md:flex-row items-center gap-6 pt-8">
+              <Button 
+                size="lg" 
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-xl md:text-2xl px-12 py-8 h-auto font-black rounded-full shadow-xl hover:shadow-2xl transition-all uppercase"
+              >
+                Connect Now<br />Free Inspection
+              </Button>
+              <div className="text-foreground">
+                <p className="text-xl md:text-2xl font-bold">
+                  UN SECURED SOLAR FINANCE @ 8.75% PA
+                </p>
+                <p className="text-lg md:text-xl font-semibold">
+                  ALL INDIA INSTALLATION AND SERVICE
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -97,35 +147,20 @@ const Hero = () => {
 };
 
 interface FeatureBadgeProps {
-  number?: string;
-  unit?: string;
-  suffix?: string;
-  icon?: string;
+  number: string;
+  unit: string;
   title: string;
-  description: string;
 }
 
-const FeatureBadge = ({ number, unit, suffix, icon, title, description }: FeatureBadgeProps) => {
+const FeatureBadge = ({ number, unit, title }: FeatureBadgeProps) => {
   return (
-    <div className="flex items-center gap-6 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-      <div className="flex-shrink-0">
-        {icon ? (
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-secondary to-[hsl(30,100%,60%)] flex items-center justify-center text-4xl shadow-lg">
-            {icon}
-          </div>
-        ) : (
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-secondary to-[hsl(30,100%,60%)] flex flex-col items-center justify-center text-white shadow-lg">
-            <div className="text-3xl font-black leading-none">{number}</div>
-            <div className="text-sm font-bold leading-none mt-1">{unit}</div>
-            {suffix && <div className="text-xs font-bold mt-1">{suffix}</div>}
-          </div>
-        )}
+    <div className="flex items-center gap-4">
+      <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-full bg-secondary flex flex-col items-center justify-center shadow-[0_8px_25px_hsl(45,100%,50%,0.4)]">
+        <div className="text-3xl md:text-4xl font-black text-secondary-foreground leading-none">{number}</div>
+        <div className="text-xs md:text-sm font-bold text-secondary-foreground leading-none mt-1">{unit}</div>
       </div>
-      <div className="flex-1">
-        <div className="bg-primary text-primary-foreground px-4 py-3 rounded-lg">
-          <h3 className="text-xl font-bold mb-1">{title}</h3>
-          <p className="text-sm font-semibold opacity-90">{description}</p>
-        </div>
+      <div className="flex-1 bg-foreground text-secondary px-6 py-3 font-bold text-sm md:text-base uppercase shadow-lg clip-arrow">
+        {title}
       </div>
     </div>
   );
