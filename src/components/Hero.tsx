@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
 import uniteLogo from "@/assets/unite-logo.png";
 import solarHero from "@/assets/solar-hero-bg.jpg";
-import businessWoman from "@/assets/business-woman.png";
 
 const Hero = () => {
   return (
@@ -61,7 +60,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Main grid with features and woman */}
+            {/* Main grid with features */}
             <div className="grid lg:grid-cols-2 gap-8 items-start pt-8">
               {/* Left side - Feature badges */}
               <div className="space-y-4">
@@ -102,22 +101,15 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Right side - Woman with ROI badges */}
-              <div className="relative flex justify-end items-end h-full">
-                <img 
-                  src={businessWoman} 
-                  alt="Professional consultant" 
-                  className="h-[500px] md:h-[600px] object-contain relative z-10"
-                />
-                <div className="absolute right-0 top-1/3 space-y-4 z-20">
-                  <div className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-bold shadow-lg">
-                    <div className="text-3xl">20% ROI FIRST</div>
-                    <div className="text-3xl">5 YEARS</div>
-                  </div>
-                  <div className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-bold shadow-lg">
-                    <div className="text-3xl">80% ROI</div>
-                    <div className="text-3xl">NEXT 25 YEARS</div>
-                  </div>
+              {/* Right side - ROI badges */}
+              <div className="space-y-4">
+                <div className="bg-secondary text-secondary-foreground px-8 py-6 rounded-lg font-bold shadow-lg">
+                  <div className="text-3xl md:text-4xl">20% ROI FIRST</div>
+                  <div className="text-3xl md:text-4xl">5 YEARS</div>
+                </div>
+                <div className="bg-secondary text-secondary-foreground px-8 py-6 rounded-lg font-bold shadow-lg">
+                  <div className="text-3xl md:text-4xl">80% ROI</div>
+                  <div className="text-3xl md:text-4xl">NEXT 25 YEARS</div>
                 </div>
               </div>
             </div>
