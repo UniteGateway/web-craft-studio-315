@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import uniteLogo from "@/assets/unite-logo.png";
 import solarHero from "@/assets/solar-hero-bg.jpg";
-import businessWoman from "@/assets/business-woman.png";
 
 const Hero = () => {
   return (
@@ -58,13 +57,8 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <img 
-              src={businessWoman} 
-              alt="Professional Business Consultant" 
-              className="absolute -top-20 -right-10 w-64 md:w-80 lg:w-96 z-10 drop-shadow-2xl"
-            />
-            <div className="grid grid-cols-1 gap-6 relative z-0">
-              <FeatureBadge
+            <div className="grid grid-cols-1 gap-6">
+              <FeatureBadge 
                 number="30"
                 unit="Years"
                 title="30 Years"
