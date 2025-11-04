@@ -114,12 +114,6 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Bottom text */}
-            <div className="pt-8">
-              <p className="text-xl md:text-2xl font-bold text-foreground">
-                UN SECURED SOLAR FINANCE @ 8.75% PA
-              </p>
-            </div>
           </div>
         </div>
       </div>
