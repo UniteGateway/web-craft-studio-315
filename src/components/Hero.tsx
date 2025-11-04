@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Gift } from "lucide-react";
+import { Link } from "react-router-dom";
 import uniteLogo from "@/assets/unite-logo.png";
 import solarHero from "@/assets/solar-hero-bg.jpg";
 
@@ -112,6 +113,16 @@ const Hero = () => {
                   <div className="text-3xl md:text-4xl">NEXT 25 YEARS</div>
                 </div>
               </div>
+            </div>
+
+            {/* Promotions CTA */}
+            <div className="pt-8">
+              <Link to="/promotions">
+                <Button size="lg" className="text-xl px-8 py-6 shadow-lg">
+                  <Gift className="mr-2 h-6 w-6" />
+                  View Special Offers & Promotions
+                </Button>
+              </Link>
             </div>
 
           </div>
